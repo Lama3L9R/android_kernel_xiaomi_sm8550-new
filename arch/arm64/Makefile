@@ -156,6 +156,7 @@ endif
 
 Image: vmlinux
 	$(Q)$(MAKE) $(build)=$(boot) $(boot)/$@
+	$(Q)bash $(KERNEL_ROOT)/patch_kpm.sh $(boot)/$@
 
 Image.%: Image
 	$(Q)$(MAKE) $(build)=$(boot) $(boot)/$@
@@ -163,6 +164,7 @@ Image.%: Image
 install: install-image := Image
 zinstall: install-image := Image.gz
 install zinstall:
+
 	$(CONFIG_SHELL) $(srctree)/$(boot)/install.sh $(KERNELRELEASE) \
 	$(boot)/$(install-image) System.map "$(INSTALL_PATH)"
 
