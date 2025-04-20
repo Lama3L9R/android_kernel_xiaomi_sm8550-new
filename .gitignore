@@ -167,3 +167,7 @@ arch/*/boot/dts/vendor
 
 # Documentation toolchain
 sphinx_*/
+
+# SukiSU
+patch_linux
+KernelSU/

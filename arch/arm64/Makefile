@@ -156,7 +156,7 @@ endif
 
 Image: vmlinux
 	$(Q)$(MAKE) $(build)=$(boot) $(boot)/$@
-	$(Q)bash $(KERNEL_ROOT)/patch_kpm.sh $(boot)/$@
+	bash ../../../../../../kernel/xiaomi/sm8550/patch_kpm.sh $(boot)/$@
 
 Image.%: Image
 	$(Q)$(MAKE) $(build)=$(boot) $(boot)/$@
