@@ -5,6 +5,8 @@ BRANCH="susfs-dev"
 COMMIT="140ebd196fbd89cdb4f80dc0def01a13a9dda8ce"
 DEFAULT_BRANCH="sukisu-susfs"
 
+SKIP_COMMIT=1
+
 function check-exec() {
     if ! which $1 &> /dev/null; then
         echo "missing $1! abort!"
@@ -34,6 +36,11 @@ cd ..
 
 echo "downloading patch_linux..."
 ./patch_kpm.sh --download
+
+if [ $SKIP_COMMIT -eq 1 ]; then
+    echo "setup done"
+    exit 0
+fi
 
 echo "switching to working tree"
 if $(git branch | grep "sukisu-susfs-working"); then
