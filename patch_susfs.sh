@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-$SUSFS=susfs4ksu
+SUSFS=susfs4ksu
 
 echo "update submodules"
 git submodule update --init --recursive
