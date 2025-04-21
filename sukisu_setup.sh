@@ -37,6 +37,9 @@ cd ..
 echo "downloading patch_linux..."
 ./patch_kpm.sh --download
 
+echo "adding CONFIG_KPM=y"
+echo "CONFIG_KPM=y" >> arch/arm64/configs/gki_defconfig
+
 if [ $SKIP_COMMIT -eq 1 ]; then
     echo "setup done"
     exit 0
