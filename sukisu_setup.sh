@@ -2,7 +2,7 @@
 
 SUKISU_REPO="ShirkNeko/SukiSU-Ultra"
 BRANCH="susfs-dev"
-COMMIT="140ebd196fbd89cdb4f80dc0def01a13a9dda8ce"
+COMMIT=""
 DEFAULT_BRANCH="sukisu-susfs"
 
 SKIP_COMMIT=1
